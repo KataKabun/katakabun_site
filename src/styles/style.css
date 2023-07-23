@@ -39,7 +39,6 @@
 
 @layer components {
 	img.background-image {
-		background-attachment: scroll;
 		position: fixed;
 		object-fit: cover;
 		height: 100%;
