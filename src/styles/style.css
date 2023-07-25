@@ -1,20 +1,45 @@
-@layer reset, defaults, components, utilities,
-	overrides;
-
 @import url("vendor/gardevoir.css") layer(reset.gardevoir);
 
+:root {
+	/* #fff */
+	--white: lab(100% 0 0);
+	--white-a70: color-mix(in lab, var(--white), transparent 30%);
+
+	/* #000 */
+	--black: lab(0% 0 0);
+	--black-a30: color-mix(in lab, var(--black), transparent 30%);
+
+	/* #f00 */
+	--red: lab(54.9665% 94.0925 94.7699);
+	--red-a40: color-mix(in lab, var(--red), transparent 60%);
+	--red-a70: color-mix(in lab, var(--red), transparent 30%);
+
+	/* #0ff */
+	--cyan: lab(90.3688% -64.8187 -16.6055);
+	--cyan-a40: color-mix(in lab, var(--cyan), transparent 60%);
+	--cyan-a70: color-mix(in lab, var(--cyan), transparent 30%);
+
+	/* #50649b */
+	--san-marino: lab(43.04% 8.18 -32.31);
+	--san-marino-a20: color-mix(in lab, var(--san-marino), transparent 80%);
+
+	/* #7326d1 */
+	--blueviolet: lab(36.121% 57.801 -74.589);
+
+	/* #ff80ce */
+	--magenta: lab(70.28% 57.24 -18.04);
+	--magenta-a70: color-mix(in lab, var(--magenta), transparent 30%);
+}
+
 @layer defaults {
-	html,
-	body {
+	:where(:root) {
 		font-family: Chivo, sans-serif;
 		font-weight: 200;
-		margin: 0;
-		padding: 0;
-		font-size: 100%;
+		font-size: 16px;
 	}
 
 	::selection {
-		background-color: #7225d3;
+		background-color: var(--blueviolet);
 	}
 
 	:is(h1, h2, h3, h4, h5, h6) {
@@ -38,37 +63,39 @@
 }
 
 @layer components {
-	img.background-image {
-		position: fixed;
-		object-fit: cover;
-		height: 100%;
-		width: 100%;
-	}
-
 	.cool-button {
 		display: inline-block;
 		width: 88px;
 		height: 31px;
+		opacity: 1;
 	}
 
 	.chromatic-aberration {
-		--dist: 0.05rem;
-		--negdist: calc(-1 * var(--dist));
+		& * {
+			--dist: 0.05rem;
+			--negdist: calc(-1 * var(--dist));
 
-		border-color: rgb(255 255 255 / 70%);
-		text-shadow:
-			rgb(255 0 0 / 70%) var(--negdist) var(--negdist),
-			rgb(0 255 255 / 70%) var(--dist) var(--dist);
-
-		&:is(a) {
-			border: 1px solid rgb(255 255 255 / 70%);
+			border-color: var(--white);
+			text-shadow:
+				var(--red-a70) var(--negdist) var(--negdist),
+				var(--cyan-a70) var(--dist) var(--dist);
 		}
 
-		&:is(a, hr) {
+		& :is(h1, h2, h3, h4, h5, h6, hr) {
+			opacity: 0.7;
+		}
+
+		& :is(a):not(.cool-button) {
+			border: 1px solid var(--white-a70);
+			opacity: 0.8;
+		}
+
+		& > :is(hr),
+		& :is(.link-grid) :is(a) {
 			box-shadow:
-				-1px -1px 0 rgb(255 0 0 / 40%),
-				1px 1px 0 rgb(0 255 255 / 40%);
-			color: white;
+				-1px -1px 0 var(--red-a40),
+				1px 1px 0 var(--cyan-a40);
+			color: var(--white);
 		}
 	}
 
@@ -76,15 +103,14 @@
 		padding: 1rem;
 		min-height: 100vh;
 		color: white;
-		background: linear-gradient(to right, rgb(0 0 0), rgb(0 0 0 / 30%)),
-			rgb(80 100 155 / 20%);
+		background: linear-gradient(to right, #000000c9, #0000002a),
+			var(--san-marino-a20);
 		text-align: center;
-		opacity: 0.8;
+		z-index: 1;
 	}
 
 	hr {
-		border: none;
-		border-top: 1px solid white;
+		border-width: 1px 0 0;
 		margin-bottom: 1rem;
 		opacity: 0.6;
 		width: 100%;
@@ -113,8 +139,8 @@
 				border-color 0.5s;
 
 			&:hover {
-				border-color: rgb(255 128 206 / 70%);
-				color: rgba(255 128 206 / 70%);
+				border-color: var(--magenta-a70);
+				color: var(--magenta-a70);
 			}
 		}
 	}
