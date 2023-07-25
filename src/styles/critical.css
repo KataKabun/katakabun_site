@@ -1,0 +1,12 @@
+@layer reset, defaults, components, utilities, overrides;
+
+@layer components {
+	img.background-image {
+		position: fixed;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+		height: 100%;
+		width: 100%;
+	}
+}

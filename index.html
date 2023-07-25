@@ -30,6 +30,16 @@
 		<!-- 180×180 -->
 		<link rel="manifest" href="manifest.webmanifest" />
 		<link rel="stylesheet" href="/src/styles/style.css" />
+		<style>
+			@import url("/src/styles/critical.css");
+		</style>
+		<link
+			rel="preload"
+			as="image"
+			imagesrcset="images/alien-boymoder-wide.webp"
+			src="images/alien-boymoder-wide.jpg"
+			alt="A blue-haired alien in a black hoodie on a colorful abstract background."
+		/>
 		<link rel="preconnect" href="https://fonts.bunny.net" />
 		<link rel="preconnect" href="https://fonts.bunny.net" crossorigin />
 		<link
@@ -55,71 +65,32 @@
 			/>
 		</picture>
 		<div class="page">
-			<aside class="navigation">
-				<h1 class="chromatic-aberration">Kata Kabun</h1>
-				<hr class="chromatic-aberration" />
-				<h2 class="chromatic-aberration">Support me</h2>
+			<aside class="navigation chromatic-aberration">
+				<h1>Kata Kabun</h1>
+				<hr />
+				<h2>Support / commission me</h2>
 				<div class="link-grid">
-					<a
-						class="chromatic-aberration"
-						rel="me"
-						href="https://ko-fi.com/KataKabun"
-						>Ko-fi</a
-					>
-					<a
-						class="chromatic-aberration"
-						href="https://patreon.com/KataKabun"
-						title="Coming soon..."
+					<a rel="me" href="https://ko-fi.com/KataKabun">Ko-fi</a>
+					<a href="https://patreon.com/KataKabun" title="Coming soon..."
 						>Patreon</a
 					>
-				</div>
-				<h2 class="chromatic-aberration">Links</h2>
-				<div class="link-grid">
 					<a
-						class="chromatic-aberration"
-						rel="me"
-						href="https://twitter.com/KataKabun"
-						>Twitter</a
-					>
-					<a
-						class="chromatic-aberration"
 						href="https://discord.com/users/824437879622860840"
 						title="@KataKabun"
 						>Discord</a
 					>
-					<a
-						class="chromatic-aberration"
-						rel="me"
-						href="https://www.youtube.com/@KataKabun"
-						>Youtube</a
-					>
-					<a
-						class="chromatic-aberration"
-						rel="me"
-						href="https://twitch.tv/KataKabun"
-						>Twitch</a
-					>
-					<a
-						class="chromatic-aberration"
-						rel="me"
-						href="https://cohost.org/KataKabun"
-						>Cohost</a
-					>
-					<a
-						class="chromatic-aberration"
-						rel="me"
-						href="https://stop.voring.me/@KataKabun"
-						>Fedi</a
-					>
-					<a
-						class="chromatic-aberration"
-						rel="me"
-						href="https://threads.net/@katakabun"
-						>Threads</a
-					>
 				</div>
-				<hr class="chromatic-aberration" />
-				<h3 class="chromatic-aberration">My button:</h3>
+				<h2>Links</h2>
+				<div class="link-grid">
+					<a rel="me" href="https://stop.voring.me/@KataKabun">Fedi</a>
+					<a rel="me" href="https://cohost.org/KataKabun">Cohost</a>
+					<a rel="me" href="https://www.youtube.com/@KataKabun">Youtube</a>
+					<a rel="me" href="https://twitch.tv/KataKabun">Twitch</a>
+					<a rel="me" href="https://threads.net/@katakabun">Threads</a>
+					<a rel="me" href="https://twitter.com/KataKabun">Twitter</a>
+				</div>
+				<hr />
+				<h3>My button:</h3>
 				<a href="https://katakabun.neocities.org" class="cool-button">
 					<picture>
 						<source
