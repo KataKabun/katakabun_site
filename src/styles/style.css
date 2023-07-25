@@ -85,7 +85,7 @@
 			opacity: 0.7;
 		}
 
-		& :is(a):not(.cool-button) {
+		& :is(.link-grid) :is(a) {
 			border: 1px solid var(--white-a70);
 			opacity: 0.8;
 		}
