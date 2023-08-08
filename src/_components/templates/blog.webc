@@ -8,7 +8,7 @@ title: Blog Default
 		<title>Kata Kabun</title>
 		<meta content="Kata Kabun" name="author" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="generator" :content="eleventy.generator">
+		<meta name="generator" :content="eleventy.generator" />
 		<meta charset="UTF-8" />
 		<meta property="og:title" content="Kata Kabun" />
 		<meta
@@ -68,8 +68,8 @@ title: Blog Default
 				href="https://fonts.bunny.net/css?family=chivo:100,200"
 			/>
 		</noscript>
-		<script type="application/ld+json">
-			//prettier-ignore
+		<script webc:keep type="application/ld+json">
+			/* prettier-ignore */
 			{ "@context": "https://schema.org", "@graph": [ { "@type": "Organization", "@id": "https://katakabun.neocities.com/#organization", "name": "Joy Kabuns", "logo": "https://katakabun.neocities.org/images/kata-kabun.png" }, { "@type": "WebSite", "@id": "https://katakabun.neocities.com/#website", "url": "https://katakabun.neocities.com", "name": "Kata Kabun", "publisher": { "@id": "https://katakabun.neocities.com/#organization" }, "inLanguage": "en-US" }, { "@type": "Person", "@id": "https://katakabun.neocities.com/#person", "name": "Kata Kabun", "affiliation": { "@id": "https://katakabun.neocities.com/#organization" }, "image": "https://katakabun.neocities.org/images/kata-kabun.png", "url": "https://katakabun.neocities.com", "sameAs": [ "https://twitter.com/katakabun", "https://twitch.tv/katakabun", "https://youtube.com/@katakabun", "https://stop.voring.me/@KataKabun", "https://patreon.com/KataKabun" ] } ] }
 		</script>
 		<style webc:keep @raw="getBundle('css')"></style>
