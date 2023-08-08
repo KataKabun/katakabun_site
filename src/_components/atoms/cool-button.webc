@@ -1,0 +1,84 @@
+<script webc:type="js">
+	let data = {
+		raw: src,
+		href: href,
+		static: static,
+		main: main,
+		alt_text: alt,
+		title_text: title,
+	};
+
+	const re = /(.+?)(\.[^.]*$|$)/;
+	const array = re.exec(data.raw);
+	data.base = array[1];
+	data.extension = array[2];
+
+	function toPaths(arr) {
+		let output = "";
+
+		arr.forEach((element, i, a) => {
+			let ending = ",\n";
+			if (i == a.length - 1) {
+				ending = "";
+			}
+
+			if (Array.isArray(element) === false) {
+				output += `${data.base}-${element}${data.extension} ${element}${ending}`;
+			} else {
+				if (element[1] !== "") {
+					ending = ` ${element[1]}${ending}`;
+				}
+				output += `${data.base}-${element[0]}${data.extension}${ending}`;
+			}
+		});
+
+		return output;
+	}
+
+	function getStaticSource(v) {
+		let static_source = "";
+		if (v !== undefined) {
+			static_source = `<source
+				srcset="${toPaths(v)}"
+				media="(prefers-reduced-motion: reduce)"
+			/>`;
+		}
+		return static_source;
+	}
+
+	`<a href=${data.href}>
+		<picture>
+			${getStaticSource(data.static)}
+			<source
+				srcset="${toPaths(data.main)}"
+			/>
+			<img
+				src="${data.raw}"
+				alt="${data.alt_text}"
+				title="${data.title_text}"
+			/>
+		</picture>
+	</a>`;
+</script>
+
+<style webc:scoped>
+	:host {
+		width: 88px;
+		height: 31px;
+	}
+
+	:host * {
+		width: inherit;
+		height: inherit;
+	}
+
+	:host,
+	:host > a,
+	:host > a > picture {
+		display: inline-block;
+	}
+
+	:host > a > picture > img {
+		image-rendering: pixelated;
+	}
+</style>

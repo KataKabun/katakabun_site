@@ -1,9 +1,14 @@
-<!doctype html>
+---
+title: Blog Default
+---
+
+<!DOCTYPE html />
 <html lang="en">
 	<head>
 		<title>Kata Kabun</title>
 		<meta content="Kata Kabun" name="author" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="generator" :content="eleventy.generator">
 		<meta charset="UTF-8" />
 		<meta property="og:title" content="Kata Kabun" />
 		<meta
@@ -12,6 +17,8 @@
 		/>
 		<meta name="robots" content="follow, index" />
 		<link rel="canonical" href="https://katakabun.neocities.org/" />
+
+		<!-- Open Graph Protocol -->
 		<meta property="og:determiner" content="the" />
 		<meta property="og:locale" content="en_US" />
 		<meta property="og:type" content="website" />
@@ -39,10 +46,7 @@
 		<link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
 		<!-- 180×180 -->
 		<link rel="manifest" href="manifest.webmanifest" />
-		<link rel="stylesheet" href="/src/styles/style.css" />
-		<style>
-			@import url("/src/styles/critical.css");
-		</style>
+		<link rel="stylesheet" href="../styles/style.css" />
 		<link
 			rel="preload"
 			as="image"
@@ -68,67 +72,9 @@
 			//prettier-ignore
 			{ "@context": "https://schema.org", "@graph": [ { "@type": "Organization", "@id": "https://katakabun.neocities.com/#organization", "name": "Joy Kabuns", "logo": "https://katakabun.neocities.org/images/kata-kabun.png" }, { "@type": "WebSite", "@id": "https://katakabun.neocities.com/#website", "url": "https://katakabun.neocities.com", "name": "Kata Kabun", "publisher": { "@id": "https://katakabun.neocities.com/#organization" }, "inLanguage": "en-US" }, { "@type": "Person", "@id": "https://katakabun.neocities.com/#person", "name": "Kata Kabun", "affiliation": { "@id": "https://katakabun.neocities.com/#organization" }, "image": "https://katakabun.neocities.org/images/kata-kabun.png", "url": "https://katakabun.neocities.com", "sameAs": [ "https://twitter.com/katakabun", "https://twitch.tv/katakabun", "https://youtube.com/@katakabun", "https://stop.voring.me/@KataKabun", "https://patreon.com/KataKabun" ] } ] }
 		</script>
+		<style webc:keep @raw="getBundle('css')"></style>
 	</head>
 	<body>
-		<picture>
-			<source srcset="images/alien-boymoder-wide.webp" type="image/webp" />
-			<img
-				class="background-image"
-				src="images/alien-boymoder-wide.jpg"
-				alt="A blue-haired alien in a black hoodie on a colorful abstract background."
-			/>
-		</picture>
-		<div class="page">
-			<aside class="navigation chromatic-aberration">
-				<h1>Kata Kabun</h1>
-				<hr />
-				<h2>Support / commission me</h2>
-				<div class="link-grid">
-					<a rel="me" href="https://ko-fi.com/KataKabun">Ko-fi</a>
-					<a href="https://patreon.com/KataKabun" title="Coming soon..."
-						>Patreon</a
-					>
-					<a
-						href="https://discord.com/users/824437879622860840"
-						title="@KataKabun"
-						>Discord</a
-					>
-				</div>
-				<h2>Links</h2>
-				<div class="link-grid">
-					<a rel="me" href="https://stop.voring.me/@KataKabun">Fedi</a>
-					<a rel="me" href="https://cohost.org/KataKabun">Cohost</a>
-					<a rel="me" href="https://youtube.com/@KataKabun">Youtube</a>
-					<a rel="me" href="https://twitch.tv/KataKabun">Twitch</a>
-					<a rel="me" href="https://threads.net/@katakabun">Threads</a>
-					<a rel="me" href="https://twitter.com/KataKabun">Twitter</a>
-				</div>
-				<hr />
-				<h3>My button:</h3>
-				<a href="https://katakabun.neocities.org" class="cool-button">
-					<picture>
-						<source
-							srcset="
-								images/kata-kabun-button-static.gif    1x,
-								images/kata-kabun-button-static-2x.gif 2x,
-								images/kata-kabun-button-static-3x.gif 3x
-							"
-							media="(prefers-reduced-motion: reduce)"
-						/>
-						<source
-							srcset="
-								images/kata-kabun-button-2x.gif 2x,
-								images/kata-kabun-button-3x.gif 3x
-							"
-						/>
-						<img
-							src="images/kata-kabun-button.gif"
-							alt="The Kata Kabun Neocities button."
-							title="Kata Kabun"
-						/>
-					</picture>
-				</a>
-			</aside>
-		</div>
+		<main @raw="content"></main>
 	</body>
 </html>

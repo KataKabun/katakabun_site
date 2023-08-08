@@ -1,4 +1,6 @@
-@import url("vendor/gardevoir.css") layer(reset.gardevoir);
+@layer reset, defaults, components, utilities, overrides;
+
+@import url("./vendor/_gardevoir.css") layer(reset.gardevoir);
 
 :root {
 	/* #fff */
@@ -30,8 +32,13 @@
 	--magenta: lab(70.28% 57.24 -18.04);
 	--magenta-a70: color-mix(in lab, var(--magenta), transparent 30%);
 }
-
 @layer defaults {
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
+
 	:where(:root) {
 		font-family: Chivo, sans-serif;
 		font-weight: 200;
@@ -42,9 +49,16 @@
 		background-color: var(--blueviolet);
 	}
 
+	html,
+	body {
+		margin: 0;
+	}
+
 	:is(h1, h2, h3, h4, h5, h6) {
 		text-transform: uppercase;
 		opacity: 0.8;
+		line-height: 1.1;
+		letter-spacing: 0.04rem;
 	}
 
 	h1 {
@@ -63,85 +77,17 @@
 }
 
 @layer components {
-	.cool-button {
-		display: inline-block;
-		width: 88px;
-		height: 31px;
-		opacity: 1;
-	}
-
-	.chromatic-aberration {
-		& * {
-			--dist: 0.05rem;
-			--negdist: calc(-1 * var(--dist));
-
-			border-color: var(--white);
-			text-shadow:
-				var(--red-a70) var(--negdist) var(--negdist),
-				var(--cyan-a70) var(--dist) var(--dist);
-		}
-
-		& :is(h1, h2, h3, h4, h5, h6, hr) {
-			opacity: 0.7;
-		}
-
-		& :is(.link-grid) :is(a) {
-			border: 1px solid var(--white-a70);
-			opacity: 0.8;
-		}
-
-		& > :is(hr),
-		& :is(.link-grid) :is(a) {
-			box-shadow:
-				-1px -1px 0 var(--red-a40),
-				1px 1px 0 var(--cyan-a40);
-			color: var(--white);
-		}
-	}
-
-	.navigation {
-		padding: 1rem;
-		min-height: 100vh;
-		color: white;
-		background: linear-gradient(to right, #000000c9, #0000002a),
-			var(--san-marino-a20);
-		text-align: center;
-		z-index: 1;
-	}
-
-	hr {
-		border-width: 1px 0 0;
-		margin-bottom: 1rem;
-		opacity: 0.6;
+	img.background-image {
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		object-fit: cover;
+		height: 100%;
 		width: 100%;
 	}
 
 	.page {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
-	}
-
-	.link-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(82px, 1fr));
-		grid-gap: 0.75rem;
-		margin-bottom: 1rem;
-		width: calc(100% - 2rem);
-
-		& a {
-			font-size: clamp(0.75rem, 0.75rem + 2vw, 1rem);
-			text-align: center;
-			display: inline-block;
-			padding: 0.25rem 0;
-			text-decoration: none;
-			transition:
-				color 0.5s,
-				border-color 0.5s;
-
-			&:hover {
-				border-color: var(--magenta-a70);
-				color: var(--magenta-a70);
-			}
-		}
 	}
 }

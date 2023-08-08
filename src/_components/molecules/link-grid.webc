@@ -1,0 +1,40 @@
+<div>
+	<slot name="fields"></slot>
+</div>
+
+<style webc:scoped>
+	:host > div {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(82px, 1fr));
+		grid-gap: 0.75rem;
+		margin-bottom: 1rem;
+		width: calc(100% - 2rem);
+	}
+
+	:host > div > a {
+		font-size: clamp(0.75rem, 0.75rem + 2vw, 1rem);
+		text-align: center;
+		display: inline-block;
+		padding: 0.25rem 0;
+		text-decoration: none;
+		transition:
+			color 0.5s,
+			border-color 0.5s;
+
+		border: 1px solid var(--white-a70);
+		opacity: 0.8;
+	}
+
+	:host > div > a:hover {
+		border-color: var(--magenta-a70);
+		color: var(--magenta-a70);
+	}
+
+	:host > div > :is(hr),
+	:host > div > :is(a) {
+		box-shadow:
+			-1px -1px 0 var(--red-a40),
+			1px 1px 0 var(--cyan-a40);
+		color: var(--white);
+	}
+</style>

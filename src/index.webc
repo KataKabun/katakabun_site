@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Kata Kabun</title>
+		<meta content="Kata Kabun" name="author" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta charset="UTF-8" />
+		<meta property="og:title" content="Kata Kabun" />
+		<meta
+			property="og:description"
+			content="Information about the comfy bunny doll VTuber from Joy Kabuns who makes art, stories, music, and more."
+		/>
+		<meta name="robots" content="follow, index" />
+		<link rel="canonical" href="https://katakabun.neocities.org/" />
+		<meta property="og:determiner" content="the" />
+		<meta property="og:locale" content="en_US" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://katakabun.neocities.org" />
+		<meta property="og:site_name" content="Kata Kabun" />
+		<meta
+			property="og:image"
+			content="https://katakabun.neocities.org/images/alien-boymoder-wide-preview.jpg"
+		/>
+		<meta
+			property="og:image:secure_url"
+			content="https://katakabun.neocities.org/images/alien-boymoder-wide-preview.jpg"
+		/>
+		<meta property="og:image:height" content="1280" />
+		<meta property="og:image:width" content="1024" />
+		<meta property="og:image:type" content="image/jpg" />
+		<meta
+			name="twitter:image:alt"
+			content="A blue-haired alien in a black hoodie on a colorful abstract background."
+		/>
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@KataKabun" />
+		<link rel="icon" href="favicon.ico" sizes="any" />
+		<!-- 32×32 -->
+		<link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+		<!-- 180×180 -->
+		<link rel="manifest" href="manifest.webmanifest" />
+		<link rel="stylesheet" href="styles/style.css" />
+		<link
+			rel="preload"
+			as="image"
+			imagesrcset="images/alien-boymoder-wide.webp"
+			src="images/alien-boymoder-wide.jpg"
+			alt="A blue-haired alien in a black hoodie on a colorful abstract background."
+		/>
+		<link rel="preconnect" href="https://fonts.bunny.net" />
+		<link rel="preconnect" href="https://fonts.bunny.net" crossorigin />
+		<link
+			rel="preload"
+			as="style"
+			href="https://fonts.bunny.net/css?family=chivo:100,200"
+			onload="this.rel='stylesheet';this.onload=null"
+		/>
+		<noscript>
+			<link
+				rel="stylesheet"
+				href="https://fonts.bunny.net/css?family=chivo:100,200"
+			/>
+		</noscript>
+		<script type="application/ld+json">
+			/* prettier-ignore */
+			{ "@context": "https://schema.org", "@graph": [ { "@type": "Organization", "@id": "https://katakabun.neocities.com/#organization", "name": "Joy Kabuns", "logo": "https://katakabun.neocities.org/images/kata-kabun.png" }, { "@type": "WebSite", "@id": "https://katakabun.neocities.com/#website", "url": "https://katakabun.neocities.com", "name": "Kata Kabun", "publisher": { "@id": "https://katakabun.neocities.com/#organization" }, "inLanguage": "en-US" }, { "@type": "Person", "@id": "https://katakabun.neocities.com/#person", "name": "Kata Kabun", "affiliation": { "@id": "https://katakabun.neocities.com/#organization" }, "image": "https://katakabun.neocities.org/images/kata-kabun.png", "url": "https://katakabun.neocities.com", "sameAs": [ "https://twitter.com/katakabun", "https://twitch.tv/katakabun", "https://youtube.com/@katakabun", "https://stop.voring.me/@KataKabun", "https://patreon.com/KataKabun" ] } ] }
+		</script>
+		<style webc:keep @raw="getBundle('css')"></style>
+	</head>
+	<body>
+		<picture>
+			<source srcset="images/alien-boymoder-wide.webp" type="image/webp" />
+			<img
+				class="background-image"
+				src="images/alien-boymoder-wide.jpg"
+				alt="A blue-haired alien in a black hoodie on a colorful abstract background."
+			/>
+		</picture>
+		<div class="page">
+			<fp-navigation></fp-navigation>
+		</div>
+	</body>
+</html>

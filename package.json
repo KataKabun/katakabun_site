@@ -5,18 +5,19 @@
 	"version": "0.0.1",
 	"packageManager": "pnpm@8.6.9",
 	"scripts": {
-		"dev": "vite",
-		"lint": "pnpm exec stylelint --fix '**/*.css'",
-		"build": "vite build",
-		"preview": "vite preview"
+		"build": "pnpm eleventy --quiet --config=.eleventy.config.cjs",
+		"dev": "(pnpm eleventy --config=.eleventy.config.cjs --serve)",
+		"lint": "pnpm exec stylelint --fix '**/*.css'"
 	},
 	"devDependencies": {
+		"@11ty/eleventy": "2.0.1",
+		"@11ty/eleventy-plugin-webc": "0.11.1",
+		"@11ty/is-land": "4.0.0",
+		"@11tyrocks/eleventy-plugin-lightningcss": "1.1.2",
 		"browserslist-to-esbuild": "1.2.0",
 		"lightningcss": "1.21.5",
 		"prettier": "3.0.0",
 		"stylelint": "15.10.2",
-		"stylelint-config-standard": "34.0.0",
-		"vite": "^4.4.6",
-		"vite-plugin-stylelint": "4.3.0"
+		"stylelint-config-standard": "34.0.0"
 	}
 }
