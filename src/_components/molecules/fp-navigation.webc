@@ -1,37 +1,39 @@
-<h1>Kata Kabun</h1>
-<hr />
-<h2>Support / commission me</h2>
-<link-grid>
-	<div slot="fields" webc:nokeep>
-		<a rel="me" href="https://ko-fi.com/KataKabun">Ko-fi</a>
-		<a href="https://patreon.com/KataKabun" title="Coming soon...">Patreon</a>
-		<a href="https://discord.com/users/824437879622860840" title="@KataKabun"
-			>Discord</a
-		>
-	</div>
-</link-grid>
-<h2>Links</h2>
-<link-grid>
-	<div slot="fields" webc:nokeep>
-		<a rel="me" href="https://stop.voring.me/@KataKabun">Fedi</a>
-		<a rel="me" href="https://cohost.org/KataKabun">Cohost</a>
-		<a rel="me" href="https://youtube.com/@KataKabun">Youtube</a>
-		<a rel="me" href="https://twitch.tv/KataKabun">Twitch</a>
-		<a rel="me" href="https://threads.net/@katakabun">Threads</a>
-		<a rel="me" href="https://twitter.com/KataKabun">Twitter</a>
-	</div>
-</link-grid>
-<hr />
-<h3>My button:</h3>
-<cool-button
-	@src="images/kata-kabun-button.gif"
-	@href="https://katakabun.neocities.org"
-	:@static="[['static', '1x'], ['static-2x', '2x'], ['static-3x', '3x']]"
-	:@main="['2x', '3x']"
-	@alt="The Kata Kabun Neocities Button"
-	@title="Kata Kabun"
->
-</cool-button>
+<nav aria-label="Primary">
+	<h1>Kata Kabun</h1>
+	<hr />
+	<h2>Support / commission me</h2>
+	<link-grid>
+		<div slot="fields" webc:nokeep>
+			<a rel="me" href="https://ko-fi.com/KataKabun">Ko-fi</a>
+			<a href="https://patreon.com/KataKabun" title="Coming soon...">Patreon</a>
+			<a href="https://discord.com/users/824437879622860840" title="@KataKabun"
+				>Discord</a
+			>
+		</div>
+	</link-grid>
+	<h2>Links</h2>
+	<link-grid>
+		<div slot="fields" webc:nokeep>
+			<a rel="me" href="https://stop.voring.me/@KataKabun">Fedi</a>
+			<a rel="me" href="https://cohost.org/KataKabun">Cohost</a>
+			<a rel="me" href="https://youtube.com/@KataKabun">Youtube</a>
+			<a rel="me" href="https://twitch.tv/KataKabun">Twitch</a>
+			<a rel="me" href="https://threads.net/@katakabun">Threads</a>
+			<a rel="me" href="https://twitter.com/KataKabun">Twitter</a>
+		</div>
+	</link-grid>
+	<hr />
+	<h3>My button:</h3>
+	<cool-button
+		@src="images/kata-kabun-button.gif"
+		@href="https://katakabun.neocities.org"
+		:@static="[['static', '1x'], ['static-2x', '2x'], ['static-3x', '3x']]"
+		:@main="['2x', '3x']"
+		@alt="The Kata Kabun Neocities Button"
+		@title="Kata Kabun"
+	>
+	</cool-button>
+</nav>
 
 <style webc:scoped>
 	:host {
@@ -45,14 +47,14 @@
 		z-index: 1;
 	}
 
-	:host > hr {
+	:host > nav > hr {
 		border-width: 1px 0 0;
 		margin-bottom: 1rem;
 		opacity: 0.6;
 		width: 100%;
 	}
 
-	:host > * {
+	:host > nav * {
 		--dist: 0.05rem;
 		--negdist: calc(-1 * var(--dist));
 
@@ -62,7 +64,7 @@
 			var(--cyan-a70) var(--dist) var(--dist);
 	}
 
-	:host *:is(h1, h2, h3, h4, h5, h6, hr) {
+	:host > nav *:is(h1, h2, h3, h4, h5, h6, hr) {
 		opacity: 0.7;
 	}
 </style>
