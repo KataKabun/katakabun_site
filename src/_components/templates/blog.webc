@@ -46,7 +46,7 @@ title: Blog Default
 		<link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
 		<!-- 180×180 -->
 		<link rel="manifest" href="manifest.webmanifest" />
-		<link rel="stylesheet" href="../styles/style.css" />
+		<link rel="stylesheet" href="../styles/style.css" webc:keep />
 		<link
 			rel="preload"
 			as="image"

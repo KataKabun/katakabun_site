@@ -32,6 +32,7 @@
 	--magenta: lab(70.28% 57.24 -18.04);
 	--magenta-a70: color-mix(in lab, var(--magenta), transparent 30%);
 }
+
 @layer defaults {
 	*,
 	*::before,
