@@ -35,28 +35,22 @@
 		return output;
 	}
 
-	function getStaticSource(v) {
-		let static_source = "";
-		if (v !== undefined) {
-			static_source = `<source
-				srcset="${toPaths(v)}"
-				media="(prefers-reduced-motion: reduce)"
-			/>`;
-		}
-		return static_source;
+	let staticSourceString = "";
+	if (data.static !== undefined) {
+		staticSourceString = `<source
+			srcset="${toPaths(data.static)}"
+			media="(prefers-reduced-motion: reduce)"
+		/>`;
 	}
+
+	let mainSourceString = `<source srcset="${toPaths(data.main)}" />`;
+	let imgString = `<img src="${data.raw}" alt="${data.alt_text}" title="${data.title_text}" />`;
 
 	`<a href=${data.href}>
 		<picture>
-			${getStaticSource(data.static)}
-			<source
-				srcset="${toPaths(data.main)}"
-			/>
-			<img
-				src="${data.raw}"
-				alt="${data.alt_text}"
-				title="${data.title_text}"
-			/>
+			${staticSourceString}
+			${mainSourceString}
+			${imgString}
 		</picture>
 	</a>`;
 </script>
