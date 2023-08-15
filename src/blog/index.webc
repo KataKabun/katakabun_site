@@ -1,0 +1,11 @@
+---
+title: Blog Default
+---
+
+<!DOCTYPE html />
+<html lang="en">
+	<head webc:is="default-head" webc:nokeep> </head>
+	<body>
+		<sticky-nav webc:nokeep></sticky-nav>
+	</body>
+</html>
