@@ -1,0 +1,12 @@
+---
+layout: base.webc
+title: Blog Default
+---
+
+<!DOCTYPE html />
+<html lang="en">
+	<head webc:is="default-head" webc:keep></head>
+	<body>
+		<main @raw="content"></main>
+	</body>
+</html>
