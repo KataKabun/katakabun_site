@@ -42,10 +42,6 @@
 </nav>
 
 <style webc:scoped>
-	:host {
-		flex-basis: 18.5rem;
-	}
-
 	:host nav {
 		--text-align-dir: center;
 		--opacity: 1;
