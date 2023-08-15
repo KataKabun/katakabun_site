@@ -14,6 +14,8 @@
 					"after-comment"
 				]
 			}
-		]
+		],
+		"hue-degree-notation": "number",
+		"color-function-notation": "modern"
 	}
 }

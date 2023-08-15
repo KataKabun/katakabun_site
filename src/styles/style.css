@@ -8,32 +8,32 @@
 
 :root {
 	/* #fff */
-	--white: lab(100% 0 0);
+	--white: oklch(100 0 0);
 	--white-a70: color-mix(in lab, var(--white), transparent 30%);
 
 	/* #000 */
-	--black: lab(0% 0 0);
+	--black: oklch(0 0 0);
 	--black-a30: color-mix(in lab, var(--black), transparent 30%);
 
 	/* #f00 */
-	--red: lab(54.9665% 94.0925 94.7699);
+	--red: oklch(62.8 0.28 29.23);
 	--red-a40: color-mix(in lab, var(--red), transparent 60%);
 	--red-a70: color-mix(in lab, var(--red), transparent 30%);
 
 	/* #0ff */
-	--cyan: lab(90.3688% -64.8187 -16.6055);
+	--cyan: oklch(90.54 0.16 194.77);
 	--cyan-a40: color-mix(in lab, var(--cyan), transparent 60%);
 	--cyan-a70: color-mix(in lab, var(--cyan), transparent 30%);
 
 	/* #50649b */
-	--san-marino: lab(43.04% 8.18 -32.31);
+	--san-marino: oklch(51.18 0.091 267.94);
 	--san-marino-a20: color-mix(in lab, var(--san-marino), transparent 80%);
 
 	/* #7326d1 */
-	--blueviolet: lab(36.121% 57.801 -74.589);
+	--blueviolet: oklch(48.82 0.235 296.67);
 
 	/* #ff80ce */
-	--magenta: lab(70.28% 57.24 -18.04);
+	--magenta: oklch(76.69 0.33 344.35);
 	--magenta-a70: color-mix(in lab, var(--magenta), transparent 30%);
 }
 
