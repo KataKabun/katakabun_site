@@ -13,7 +13,8 @@ module.exports = function (eleventyConfig) {
 		minify: false
 	});
 
-	eleventyConfig.addPassthroughCopy("images");
+	eleventyConfig.addPassthroughCopy("src/images");
+	eleventyConfig.addPassthroughCopy("src/fonts");
 
 	function getPosts(collectionApi) {
 		return collectionApi.getFilteredByGlob("./src/blog/*").reverse().filter(function (item) {
