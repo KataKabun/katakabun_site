@@ -46,7 +46,6 @@
 <style webc:scoped>
 	:host {
 		flex-basis: 18.5rem;
-		z-index: 1;
 	}
 
 	:host nav {
@@ -63,7 +62,6 @@
 		padding: 1rem;
 		min-block-size: 100vb;
 		color: var(--main-color);
-		z-index: 1;
 		text-align: var(--text-align-dir);
 	}
 
