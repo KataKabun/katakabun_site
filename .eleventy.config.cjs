@@ -2,6 +2,8 @@ const pluginWebc = require("@11ty/eleventy-plugin-webc");
 // const lightningCSS = require("@11tyrocks/eleventy-plugin-lightningcss");
 
 module.exports = function (eleventyConfig) {
+	eleventyConfig.ignores.add("./README.md");
+
 	eleventyConfig.addPlugin(pluginWebc, {
 		components: [
 			"src/_components/**/*.webc",
