@@ -1,5 +1,6 @@
 @layer reset, defaults, components, utilities, overrides;
 
+/* Resets and frameworks */
 @import url("./vendor/_gardevoir.css") layer(reset.gardevoir);
 
 /* Typefaces and typography */
@@ -37,6 +38,16 @@
 	--magenta-a70: color-mix(in lab, var(--magenta), transparent 30%);
 }
 
+@layer utilities {
+	.flow {
+		--flow-space: 1rem;
+	}
+
+	.flow > * + * {
+		margin-block-start: var(--flow-space);
+	}
+}
+
 @layer defaults {
 	*,
 	*::before,
@@ -44,40 +55,67 @@
 		box-sizing: border-box;
 	}
 
-	:where(:root) {
-		font-family: Chivo, sans-serif;
-		font-weight: 200;
-		font-size: 16px;
+	:root {
+		/*
+			I want so badly to use the round() function here.
+			https://caniuse.com/mdn-css_types_round
+			
+			It can be done with this too, which is almost supported widely.
+			https://caniuse.com/mdn-css_at-rules_property
+			
+			It won't work with Lightning CSS because that only works with
+			things that don't use variables.
+		*/
+		--font-weight: 150;
+
+		/* --font-weight-fallback: round(var(--font-weight), 100); */
+		--font-weight-fallback: 200;
+
+		font-family: Chivo, Murecho, system-ui, sans-serif;
+		font-weight: var(--font-weight-fallback);
+		font-variation-settings: "wght" var(--font-weight);
+
+		--font-size: 1rem;
+		--text-transform: none;
+		--opacity: 1;
+		--line-height: 1.15;
+		--letter-spacing: 0;
+		--selection-color: var(--blueviolet);
 	}
 
 	::selection {
-		background-color: var(--blueviolet);
-	}
-
-	html,
-	body {
-		margin: 0;
+		background-color: var(--selection-color);
 	}
 
 	:is(h1, h2, h3, h4, h5, h6) {
-		text-transform: uppercase;
-		opacity: 0.8;
-		line-height: 1.1;
-		letter-spacing: 0.04rem;
+		--font-weight: 200;
+		--font-weight-fallback: 200;
+		--text-transform: uppercase;
+		--line-height: 1.2;
+		--letter-spacing: 0.03rem;
 	}
 
 	h1 {
-		font-weight: 100;
-		font-size: clamp(1.25rem, 1.25rem + 2vw, 2rem);
+		--font-size: clamp(1.25rem, 1.25rem + 2vi, 2rem);
 	}
 
 	:is(h2, h3) {
-		font-size: 0.8rem;
-		margin-bottom: 0.75rem;
+		--font-size: clamp(0.7rem, 0.7rem + 1vi, 0.85rem);
 	}
 
-	h2 {
-		text-align: left;
+	:is(a, p, span, h1, h2, h3, h4, h5, h6, hr) {
+		font-size: var(--font-size);
+		text-align: var(--text-align-dir);
+		text-transform: var(--text-transform);
+		opacity: var(--opacity);
+		line-height: var(--line-height);
+		letter-spacing: var(--letter-spacing);
+		font-weight: var(--font-weight-fallback);
+		font-variation-settings: "wght" var(--font-weight);
+	}
+
+	nav {
+		z-index: 1;
 	}
 }
 
@@ -91,8 +129,28 @@
 		width: 100%;
 	}
 
-	.page {
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+	.navbar {
+		background: linear-gradient(to right, #0000002a, #0000002a),
+			var(--san-marino-a20);
+		color: white;
+		height: fit-content;
+		width: 100%;
+	}
+
+	.navbar ul {
+		display: flex;
+	}
+
+	.navbar ul li {
+		list-style: none;
+	}
+
+	.navbar ul li a {
+		--font-size: clamp(1rem, 1rem + 1.5vi, 1.5rem);
+
+		display: inline-block;
+		padding-block: 0.5rem;
+		padding-inline: 1rem;
+		color: white;
 	}
 }
