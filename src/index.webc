@@ -13,5 +13,7 @@ title: Kata Kabun
 			/>
 		</picture>
 	</div>
-	<fp-navigation></fp-navigation>
+	<sidebar-c class="nav-wrapper">
+		<fp-navigation slot="sidebar"></fp-navigation>
+	</sidebar-c>
 </main>
