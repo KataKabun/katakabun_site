@@ -57,13 +57,13 @@
 
 <style webc:scoped>
 	:host {
-		width: 88px;
-		height: 31px;
+		inline-size: 88px;
+		block-size: 31px;
 	}
 
 	:host * {
-		width: inherit;
-		height: inherit;
+		inline-size: inherit;
+		block-size: inherit;
 	}
 
 	:host,

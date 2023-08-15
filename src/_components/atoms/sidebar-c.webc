@@ -1,0 +1,9 @@
+<div webc:root class="with-sidebar">
+	<div class="sidebar">
+		<slot name="sidebar"></slot>
+	</div>
+	<div class="not-sidebar">
+		<slot name="else"></slot>
+	</div>
+</div>
+<style></style>

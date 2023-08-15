@@ -1,70 +1,108 @@
-<nav aria-label="Primary">
-	<h1>Kata Kabun</h1>
-	<hr />
-	<h2>Support / commission me</h2>
-	<link-grid>
-		<div slot="fields" webc:nokeep>
-			<a rel="me" href="https://ko-fi.com/KataKabun">Ko-fi</a>
-			<a href="https://patreon.com/KataKabun" title="Coming soon...">Patreon</a>
-			<a href="https://discord.com/users/824437879622860840" title="@KataKabun"
-				>Discord</a
-			>
-		</div>
-	</link-grid>
-	<h2>Links</h2>
-	<link-grid>
-		<div slot="fields" webc:nokeep>
-			<a rel="me" href="https://stop.voring.me/@KataKabun">Fedi</a>
-			<a rel="me" href="https://cohost.org/KataKabun">Cohost</a>
-			<a rel="me" href="https://youtube.com/@KataKabun">Youtube</a>
-			<a rel="me" href="https://twitch.tv/KataKabun">Twitch</a>
-			<a rel="me" href="https://threads.net/@katakabun">Threads</a>
-			<a rel="me" href="https://twitter.com/KataKabun">Twitter</a>
-		</div>
-	</link-grid>
-	<hr />
-	<h3>My button:</h3>
-	<cool-button
-		@src="images/kata-kabun-button.gif"
-		@href="https://katakabun.neocities.org"
-		:@static="[['static', '1x'], ['static-2x', '2x'], ['static-3x', '3x']]"
-		:@main="['2x', '3x']"
-		@alt="The Kata Kabun Neocities Button"
-		@title="Kata Kabun"
-	>
-	</cool-button>
-</nav>
+<div class="with-sidebar">
+	<nav aria-label="Primary" class="flow sidebar">
+		<h1>Kata Kabun</h1>
+		<hr />
+		<h2>Support / commission me</h2>
+		<link-grid>
+			<div slot="fields" webc:nokeep>
+				<a rel="me" href="https://ko-fi.com/KataKabun">Ko-fi</a>
+				<a href="https://patreon.com/KataKabun" title="Coming soon...">
+					Patreon
+				</a>
+				<a
+					href="https://discord.com/users/824437879622860840"
+					title="@KataKabun"
+				>
+					Discord
+				</a>
+			</div>
+		</link-grid>
+		<h2>Links</h2>
+		<link-grid>
+			<div slot="fields" webc:nokeep>
+				<a rel="me" href="https://stop.voring.me/@KataKabun">Fedi</a>
+				<a rel="me" href="https://cohost.org/KataKabun">Cohost</a>
+				<a rel="me" href="https://youtube.com/@KataKabun">Youtube</a>
+				<a rel="me" href="https://twitch.tv/KataKabun">Twitch</a>
+				<a rel="me" href="https://threads.net/@katakabun">Threads</a>
+				<a rel="me" href="https://twitter.com/KataKabun">Twitter</a>
+			</div>
+		</link-grid>
+		<hr />
+		<link-grid>
+			<div slot="fields" webc:nokeep>
+				<a href="/blog/">Blog</a>
+				<a href="/about/">About</a>
+			</div>
+		</link-grid>
+		<h3>My button:</h3>
+		<cool-button
+			@src="images/kata-kabun-button.gif"
+			@href="/"
+			:@static="[['static', '1x'], ['static-2x', '2x'], ['static-3x', '3x']]"
+			:@main="['2x', '3x']"
+			@alt="The Kata Kabun Neocities Button"
+			@title="Kata Kabun"
+		>
+		</cool-button>
+	</nav>
+	<div class="not-sidebar"></div>
+</div>
 
 <style webc:scoped>
-	:host {
-		left: 0;
-		padding: 1rem;
-		min-height: 100vh;
-		color: white;
+	:host nav {
+		--text-align-dir: center;
+		--opacity: 1;
+		--main-color: var(--white);
+
 		background: linear-gradient(to right, #000000c9, #0000002a),
 			var(--san-marino-a20);
-		text-align: center;
+		padding: 1rem;
+		min-block-size: 100vb;
+		color: var(--main-color);
 		z-index: 1;
+		flex-basis: 17rem;
+		text-align: var(--text-align-dir);
 	}
 
-	:host > nav > hr {
-		border-width: 1px 0 0;
-		margin-bottom: 1rem;
-		opacity: 0.6;
-		width: 100%;
-	}
-
-	:host > nav * {
+	:host nav * {
 		--dist: 0.05rem;
 		--negdist: calc(-1 * var(--dist));
 
-		border-color: var(--white);
+		border-color: var(--main-color);
 		text-shadow:
 			var(--red-a70) var(--negdist) var(--negdist),
 			var(--cyan-a70) var(--dist) var(--dist);
 	}
 
-	:host > nav *:is(h1, h2, h3, h4, h5, h6, hr) {
-		opacity: 0.7;
+	:host nav *:is(h1, h2, h3, h4, h5, h6, hr) {
+		--opacity: 0.75;
+	}
+
+	:host nav > hr {
+		--opacity: 0.6;
+
+		border-block-width: 1px 0;
+		border-inline-width: 0 0;
+		inline-size: 100%;
+	}
+
+	:host nav > h2 {
+		--text-align-dir: start;
+	}
+
+	.with-sidebar {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.sidebar {
+		flex-grow: 1;
+	}
+
+	.not-sidebar {
+		flex-basis: 0;
+		flex-grow: 999;
+		min-inline-size: 50%;
 	}
 </style>
