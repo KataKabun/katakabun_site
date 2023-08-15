@@ -55,6 +55,10 @@
 		--flow-space: 1rem;
 	}
 
+	.flow * {
+		margin-block: 0;
+	}
+
 	.flow > * + * {
 		margin-block-start: var(--flow-space);
 	}
