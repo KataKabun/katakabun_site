@@ -1,0 +1,27 @@
+@font-face {
+	font-family: Murecho;
+	src: url("/fonts/Murecho-Regular.woff2") format("woff2");
+	font-weight: normal;
+	font-display: swap;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: Murecho;
+	src: url("/fonts/Murecho-Bold.woff2") format("woff2");
+	font-weight: bold;
+	font-display: swap;
+	font-style: normal;
+}
+
+@supports (font-variation-settings: normal) {
+	@font-face {
+		font-family: Murecho;
+		font-style: normal;
+		font-weight: 400 700;
+		font-display: swap;
+		src:
+			url("/fonts/Murecho-Variable.woff2") format("woff2 supports variations"),
+			url("/fonts/Murecho-Variable.woff2") format("woff2-variations");
+	}
+}

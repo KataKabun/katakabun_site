@@ -2,6 +2,10 @@
 
 @import url("./vendor/_gardevoir.css") layer(reset.gardevoir);
 
+/* Typefaces and typography */
+@import url("./typography/chivo.css");
+@import url("./typography/murecho.css");
+
 :root {
 	/* #fff */
 	--white: lab(100% 0 0);
