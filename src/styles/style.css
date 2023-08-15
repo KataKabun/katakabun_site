@@ -9,33 +9,45 @@
 
 :root {
 	/* #fff */
-	--white: oklch(100 0 0);
-	--white-a70: color-mix(in lab, var(--white), transparent 30%);
+	--white: oklch(100% 0 0);
+	--white-a70: color-mix(in oklch, var(--white), transparent 30%);
 
 	/* #000 */
-	--black: oklch(0 0 0);
-	--black-a30: color-mix(in lab, var(--black), transparent 30%);
+	--black: oklch(0% 0 0);
+	--black-a30: color-mix(in oklch, var(--black), transparent 30%);
 
 	/* #f00 */
-	--red: oklch(62.8 0.28 29.23);
-	--red-a40: color-mix(in lab, var(--red), transparent 60%);
-	--red-a70: color-mix(in lab, var(--red), transparent 30%);
+	--red: oklch(62.8% 0.25 29.23);
+	--red-a40: color-mix(in oklch, var(--red), transparent 60%);
+	--red-a50: color-mix(in oklch, var(--red), transparent 50%);
+	--red-a60: color-mix(in oklch, var(--red), transparent 40%);
+	--red-a70: color-mix(in oklch, var(--red), transparent 30%);
 
 	/* #0ff */
-	--cyan: oklch(90.54 0.16 194.77);
-	--cyan-a40: color-mix(in lab, var(--cyan), transparent 60%);
-	--cyan-a70: color-mix(in lab, var(--cyan), transparent 30%);
+	--cyan: oklch(90.54% 0.1545 194.77);
+	--cyan-a40: color-mix(in oklch, var(--cyan), transparent 60%);
+	--cyan-a50: color-mix(in oklch, var(--cyan), transparent 50%);
+	--cyan-a60: color-mix(in oklch, var(--cyan), transparent 40%);
+	--cyan-a70: color-mix(in oklch, var(--cyan), transparent 30%);
 
 	/* #50649b */
-	--san-marino: oklch(51.18 0.091 267.94);
-	--san-marino-a20: color-mix(in lab, var(--san-marino), transparent 80%);
+	--san-marino: oklch(46% 0.24 272.94);
+	--san-marino-a30: color-mix(in oklch, var(--san-marino), transparent 70%);
 
 	/* #7326d1 */
-	--blueviolet: oklch(48.82 0.235 296.67);
+	--blueviolet: oklch(48.82% 0.235 296.67);
 
 	/* #ff80ce */
-	--magenta: oklch(76.69 0.33 344.35);
-	--magenta-a70: color-mix(in lab, var(--magenta), transparent 30%);
+	--magenta: oklch(76.69% 0.17 344.35);
+	--magenta-a70: color-mix(in oklch, var(--magenta), transparent 30%);
+}
+
+@media (color-gamut: p3) {
+	:root {
+		--red: oklch(62.8% 0.28 29.23);
+		--cyan: oklch(90.54% 0.16 194.77);
+		--magenta: oklch(76.69% 0.33 344.35);
+	}
 }
 
 @layer utilities {
@@ -152,5 +164,10 @@
 		padding-block: 0.5rem;
 		padding-inline: 1rem;
 		color: white;
+	}
+
+	.nav-wrapper .sidebar {
+		flex-basis: 17.5rem;
+		z-index: 1;
 	}
 }

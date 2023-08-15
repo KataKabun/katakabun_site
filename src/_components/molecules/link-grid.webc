@@ -44,8 +44,8 @@
 	:host > div > :is(hr),
 	:host > div > :is(a) {
 		box-shadow:
-			-1px -1px 0 var(--red-a40),
-			1px 1px 0 var(--cyan-a40);
+			-1px -1px 0 var(--red-a60),
+			1px 1px 0 var(--cyan-a60);
 		color: var(--main-color);
 	}
 </style>
