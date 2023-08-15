@@ -1,51 +1,48 @@
-<div>
-	<slot name="fields"></slot>
-</div>
+<ul webc:root="override">
+	<slot></slot>
+</ul>
 
 <style webc:scoped>
 	:host {
 		--main-color: var(--white);
 		--opacity: 1;
-	}
 
-	:host > div {
+		list-style-type: none;
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(82px, 1fr));
 		grid-gap: 0.75rem;
 		inline-size: calc(100% - 2rem);
-		margin: inherit;
 	}
 
-	:host div,
-	:host div a {
-		opacity: var(--opacity);
+	li,
+	a {
+		display: inline-block;
 	}
 
-	:host > div > :is(a) {
+	li :is(a) {
 		--font-size: clamp(0.75rem, 0.75rem + 2vi, 1rem);
 		--text-align-dir: center;
 		--opacity: 0.8;
 
-		display: inline-block;
-		padding-block: 0.25rem;
 		text-decoration: none;
-		transition:
-			color 0.5s,
-			border-color 0.5s;
+		padding-block: 0.25rem;
+		block-size: 100%;
+		inline-size: 100%;
 
+		opacity: var(--opacity);
 		border: 1px solid var(--main-color);
 		border-color: color-mix(in lab, var(--main-color), transparent 30%);
-	}
-
-	:host > div > a:hover {
-		--main-color: var(--magenta-a70);
-	}
-
-	:host > div > :is(hr),
-	:host > div > :is(a) {
 		box-shadow:
 			-1px -1px 0 var(--red-a60),
 			1px 1px 0 var(--cyan-a60);
 		color: var(--main-color);
+
+		transition:
+			color 0.5s,
+			border-color 0.5s;
+	}
+
+	li a:hover {
+		--main-color: var(--magenta-a70);
 	}
 </style>

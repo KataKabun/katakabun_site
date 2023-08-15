@@ -3,33 +3,31 @@
 	<hr />
 	<h2>Support / commission me</h2>
 	<link-grid>
-		<div slot="fields" webc:nokeep>
-			<a rel="me" href="https://ko-fi.com/KataKabun">Ko-fi</a>
+		<li><a rel="me" href="https://ko-fi.com/KataKabun">Ko-fi</a></li>
+		<li>
 			<a href="https://patreon.com/KataKabun" title="Coming soon...">
 				Patreon
 			</a>
+		</li>
+		<li>
 			<a href="https://discord.com/users/824437879622860840" title="@KataKabun">
 				Discord
 			</a>
-		</div>
+		</li>
 	</link-grid>
 	<h2>Links</h2>
 	<link-grid>
-		<div slot="fields" webc:nokeep>
-			<a rel="me" href="https://stop.voring.me/@KataKabun">Fedi</a>
-			<a rel="me" href="https://cohost.org/KataKabun">Cohost</a>
-			<a rel="me" href="https://youtube.com/@KataKabun">Youtube</a>
-			<a rel="me" href="https://twitch.tv/KataKabun">Twitch</a>
-			<a rel="me" href="https://threads.net/@katakabun">Threads</a>
-			<a rel="me" href="https://twitter.com/KataKabun">Twitter</a>
-		</div>
+		<li><a rel="me" href="https://stop.voring.me/@KataKabun">Fedi</a></li>
+		<li><a rel="me" href="https://cohost.org/KataKabun">Cohost</a></li>
+		<li><a rel="me" href="https://youtube.com/@KataKabun">Youtube</a></li>
+		<li><a rel="me" href="https://twitch.tv/KataKabun">Twitch</a></li>
+		<li><a rel="me" href="https://threads.net/@katakabun">Threads</a></li>
+		<li><a rel="me" href="https://twitter.com/KataKabun">Twitter</a></li>
 	</link-grid>
 	<hr />
 	<link-grid>
-		<div slot="fields" webc:nokeep>
-			<a href="/blog/">Blog</a>
-			<a href="/about/">About</a>
-		</div>
+		<li><a href="/blog/">Blog</a></li>
+		<li><a href="/about/">About</a></li>
 	</link-grid>
 	<h3>My button:</h3>
 	<cool-button
