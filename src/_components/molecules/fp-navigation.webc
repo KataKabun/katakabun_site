@@ -29,7 +29,7 @@
 		<li><a href="/blog/">Blog</a></li>
 		<li><a href="/about/">About</a></li>
 	</link-grid>
-	<h3>My button:</h3>
+	<p>My button:</p>
 	<cool-button
 		@src="images/kata-kabun-button.gif"
 		@href="/"
@@ -73,8 +73,17 @@
 			var(--cyan-a70) var(--dist) var(--dist);
 	}
 
-	:host nav *:is(h1, h2, h3, h4, h5, h6, hr) {
+	:host nav *:is(h1, h2, h3, h4, h5, h6, hr, p) {
 		--opacity: 0.75;
+	}
+
+	nav p {
+		--font-size: clamp(0.7rem, 0.7rem + 1vi, 0.85rem);
+		--font-weight: 200;
+		--font-weight-fallback: 200;
+		--text-transform: uppercase;
+		--line-height: 1.2;
+		--letter-spacing: 0.03rem;
 	}
 
 	:host nav hr {
