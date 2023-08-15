@@ -1,0 +1,3 @@
+*.webc linguist-language=html
+
+src/styles/vendor/* linguist-vendored
