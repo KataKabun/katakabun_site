@@ -1,5 +1,5 @@
 const pluginWebc = require("@11ty/eleventy-plugin-webc");
-// const lightningCSS = require("@11tyrocks/eleventy-plugin-lightningcss");
+const lightningCSS = require("@11tyrocks/eleventy-plugin-lightningcss");
 
 module.exports = function (eleventyConfig) {
 	eleventyConfig.ignores.add("./README.md");
@@ -11,12 +11,9 @@ module.exports = function (eleventyConfig) {
 		]
 	});
 
-	/*
-	 *	This plugin is a lot of trouble.
-	 *	eleventyConfig.addPlugin(lightningCSS, {
-	 *		minify: false
-	 *	});
-	*/
+	eleventyConfig.addPlugin(lightningCSS, {
+		minify: false
+	});
 
 	eleventyConfig.addPassthroughCopy("src/images");
 	eleventyConfig.addPassthroughCopy("src/fonts");
