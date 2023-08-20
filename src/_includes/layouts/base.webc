@@ -35,12 +35,12 @@
 		/>
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:site" content="@KataKabun" />
-		<link rel="icon" href="/favicon.ico" sizes="any" />
+		<link rel="icon" href="../../favicon.ico" sizes="any" />
 		<!-- 32×32 -->
-		<link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+		<link rel="apple-touch-icon" href="../../images/apple-touch-icon.png" />
 		<!-- 180×180 -->
-		<link rel="manifest" href="/manifest.webmanifest" />
-		<link rel="stylesheet" href="/styles/style.css" webc:keep />
+		<link rel="manifest" href="../../manifest.webmanifest" />
+		<link rel="stylesheet" href="../../styles/style.css" webc:keep />
 		<link
 			rel="preload"
 			as="image"
