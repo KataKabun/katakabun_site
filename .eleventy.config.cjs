@@ -19,6 +19,7 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("src/fonts");
 	eleventyConfig.addPassthroughCopy("src/favicon.ico");
 	eleventyConfig.addPassthroughCopy("src/manifest.webmanifest");
+	eleventyConfig.addPassthroughCopy("src/robots.txt");
 
 	function getPosts(collectionApi) {
 		return collectionApi.getFilteredByGlob("./src/blog/*").reverse().filter(function (item) {
